@@ -38,6 +38,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(dataService: ProductionDataService())
+        ContentView(dataService: ProductionDataService(url: URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")!))
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct FetchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(dataService: ProductionDataService())
+            ContentView(dataService: ProductionDataService(url: URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")!))
         }
     }
 }
