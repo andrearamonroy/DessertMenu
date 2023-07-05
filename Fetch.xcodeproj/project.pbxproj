@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		659A5F8A2A55AACC00B33EBB /* DessertImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A5F892A55AACC00B33EBB /* DessertImageView.swift */; };
+		659A5F8C2A55ADBC00B33EBB /* DessertImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A5F8B2A55ADBC00B33EBB /* DessertImageService.swift */; };
+		659A5F912A55B89300B33EBB /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A5F902A55B89300B33EBB /* NetworkingManager.swift */; };
+		659A5F932A55CD1E00B33EBB /* DessertImageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A5F922A55CD1E00B33EBB /* DessertImageVM.swift */; };
 		65AF728E2A52FCC2005D7874 /* FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF728D2A52FCC2005D7874 /* FetchApp.swift */; };
 		65AF72902A52FCC2005D7874 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF728F2A52FCC2005D7874 /* ContentView.swift */; };
 		65AF72922A52FCC4005D7874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65AF72912A52FCC4005D7874 /* Assets.xcassets */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		659A5F892A55AACC00B33EBB /* DessertImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertImageView.swift; sourceTree = "<group>"; };
+		659A5F8B2A55ADBC00B33EBB /* DessertImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertImageService.swift; sourceTree = "<group>"; };
+		659A5F902A55B89300B33EBB /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		659A5F922A55CD1E00B33EBB /* DessertImageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertImageVM.swift; sourceTree = "<group>"; };
 		65AF728A2A52FCC2005D7874 /* Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65AF728D2A52FCC2005D7874 /* FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchApp.swift; sourceTree = "<group>"; };
 		65AF728F2A52FCC2005D7874 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +47,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		659A5F882A55AA9400B33EBB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				659A5F892A55AACC00B33EBB /* DessertImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		659A5F8F2A55B86400B33EBB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				659A5F902A55B89300B33EBB /* NetworkingManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		65AF72812A52FCC2005D7874 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +82,9 @@
 		65AF728C2A52FCC2005D7874 /* Fetch */ = {
 			isa = PBXGroup;
 			children = (
-				65AF72A52A5301F7005D7874 /* Utilities */,
+				659A5F8F2A55B86400B33EBB /* Utilities */,
+				659A5F882A55AA9400B33EBB /* Components */,
+				65AF72A52A5301F7005D7874 /* Services */,
 				65AF729E2A52FD8E005D7874 /* ViewModels */,
 				65AF729D2A52FD6A005D7874 /* Models */,
 				65AF729C2A52FD57005D7874 /* Views */,
@@ -98,16 +124,18 @@
 			isa = PBXGroup;
 			children = (
 				65AF72A12A53015A005D7874 /* DessertVM.swift */,
+				659A5F922A55CD1E00B33EBB /* DessertImageVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		65AF72A52A5301F7005D7874 /* Utilities */ = {
+		65AF72A52A5301F7005D7874 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				65AF72A62A530233005D7874 /* DataService.swift */,
+				659A5F8B2A55ADBC00B33EBB /* DessertImageService.swift */,
 			);
-			path = Utilities;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +209,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				65AF72902A52FCC2005D7874 /* ContentView.swift in Sources */,
+				659A5F932A55CD1E00B33EBB /* DessertImageVM.swift in Sources */,
+				659A5F8A2A55AACC00B33EBB /* DessertImageView.swift in Sources */,
 				65AF72A02A52FF25005D7874 /* DessertModel.swift in Sources */,
 				65AF728E2A52FCC2005D7874 /* FetchApp.swift in Sources */,
+				659A5F8C2A55ADBC00B33EBB /* DessertImageService.swift in Sources */,
+				659A5F912A55B89300B33EBB /* NetworkingManager.swift in Sources */,
 				65AF72A22A53015A005D7874 /* DessertVM.swift in Sources */,
 				65AF72A72A530233005D7874 /* DataService.swift in Sources */,
 			);

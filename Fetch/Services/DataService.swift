@@ -22,8 +22,7 @@ class ProductionDataService: DataServiceProtocol {
     }
     
     func getData() -> AnyPublisher <MealModel, Error> {
-        URLSession.shared.dataTaskPublisher(for: url)
-            .map { $0.data }
+       NetworkingManager.download(url: url)
             .decode(type: MealModel.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()

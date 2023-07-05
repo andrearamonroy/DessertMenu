@@ -19,13 +19,7 @@ struct ContentView: View {
         ScrollView {
             ForEach(vm.desserts) { dessert in
                 VStack {
-                    AsyncImage(url: URL(string: dessert.image)) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    } placeholder: {
-                        ProgressView()
-                    }
+                   DessertImageView(dessert: dessert)
                     .frame(width: 100, height: 100)
                     .padding()
                     Text(dessert.title)
@@ -41,3 +35,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(dataService: ProductionDataService(url: URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")!))
     }
 }
+
+

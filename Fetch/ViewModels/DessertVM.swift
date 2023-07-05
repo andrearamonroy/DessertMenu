@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 class DessertViewModel: ObservableObject {
     
@@ -21,20 +22,12 @@ class DessertViewModel: ObservableObject {
     
     private func loadDesserts(){
         dataService.getData()
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    print("Error: \(error)")
-                }
-            }, receiveValue: { [weak self] returnedMeals in
+            .sink(receiveCompletion: NetworkingManager.handleCompletition, receiveValue: { [weak self] returnedMeals in
                 self?.desserts = returnedMeals.meals
             })
             .store(in: &cancellables)
     }
+    
 }
-
-
 
 
