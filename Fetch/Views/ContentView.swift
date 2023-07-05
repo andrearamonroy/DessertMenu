@@ -17,14 +17,15 @@ struct ContentView: View {
     
     var body: some View {
         ScrollView {
+            
             ForEach(vm.desserts) { dessert in
-                VStack {
+                HStack {
                    DessertImageView(dessert: dessert)
                     .frame(width: 100, height: 100)
-                    .padding()
                     Text(dessert.title)
-                    Text(dessert.id)
+                    Spacer()
                 }
+                .padding()
             }
         }
     }
