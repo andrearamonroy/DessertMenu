@@ -7,12 +7,12 @@
 
 import Foundation
 
-// MARK: - 
+// MARK: - MealModel
 struct MealModel: Codable, Hashable {
     let meals: [DessertModel]
 }
 
-// MARK: -
+// MARK: - DessertModel
 struct DessertModel: Codable, Identifiable, Hashable {
     var id: String
     let title: String

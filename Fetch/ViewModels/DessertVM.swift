@@ -12,7 +12,7 @@ import UIKit
 class DessertViewModel: ObservableObject {
     
     @Published var desserts: [DessertModel] = []
-    var cancellables = Set<AnyCancellable>()
+    private var cancellables = Set<AnyCancellable>()
     let dataService: ProductionDataService
     
     init(dataService: ProductionDataService){
@@ -29,5 +29,6 @@ class DessertViewModel: ObservableObject {
     }
     
 }
+
 
 
