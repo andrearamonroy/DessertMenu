@@ -32,31 +32,3 @@ class ProductionDataService: DataServiceProtocol {
 
 
 
-
-
-
-
-
-//class MockDataService: DataServiceProtocol {
-//    let mealModel: MealModel
-//
-//    init() {
-//        mealModel = MealModel(meals: [])
-//        assignMockData()
-//    }
-//    
-//    func assignMockData() {
-//        let dessert1 = DessertModel(id: "1", title: "Chocolate Cake", image: "chocolate_cake.jpg")
-//        let dessert2 = DessertModel(id: "2", title: "Strawberry Cheesecake", image: "strawberry_cheesecake.jpg")
-//        mealModel.meals = [dessert1, dessert2]
-//    }
-//
-//    func getData() -> AnyPublisher<MealModel, Error> {
-//        return Just(mealModel)
-//            .setFailureType(to: Error.self)
-//            .eraseToAnyPublisher()
-//    }
-//}
-
-
-

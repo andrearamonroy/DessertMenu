@@ -12,9 +12,12 @@ struct FetchApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView(dataService: ProductionDataService(url: URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")!))
+                if let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") {
+                    ContentView(dataService: ProductionDataService(url: url))
+                } else {
+                    Text("Invalid URL")
+                }
             }
-            
         }
     }
 }

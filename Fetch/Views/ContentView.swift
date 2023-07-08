@@ -16,17 +16,8 @@ struct ContentView: View {
     }
     var body: some View {
         VStack {
-            Text("Dessert Menu")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding()
-                .foregroundColor(.white)
-
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .padding(.top, UIApplication.shared.connectedScenes
-                                        .compactMap { $0 as? UIWindowScene }
-                                        .first?.windows.first?.safeAreaInsets.top)
+            DessertHeaderView(title: "Dessert Recipes")
+            
             ScrollView {
                 ForEach(vm.desserts ) { dessert in
                     NavigationLink(
@@ -39,7 +30,6 @@ struct ContentView: View {
                                     .shadow(radius: 4)
                                 
                                 Text(dessert.title)
-                                Text(dessert.id)
                                     .font(.headline)
                                 
                                 Spacer()
@@ -63,7 +53,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(dataService: ProductionDataService(url: URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")!))
+        if let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") {
+            ContentView(dataService: ProductionDataService(url: url))
+        } else {
+            Text("Invalid URL")
+        }
     }
 }
 

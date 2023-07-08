@@ -25,16 +25,7 @@ class DetailDataService: ObservableObject {
             .decode(type: DessertDetailModel.self, decoder: JSONDecoder())
             .map { $0.meals }
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: {completion in
-                switch completion {
-                case .finished:
-                    // Handle completion if needed
-                    break
-                case .failure(let error):
-                    // Handle error
-                    print("Error: \(error)")
-                }
-            }, receiveValue: { [weak self] meals in
+            .sink(receiveCompletion: NetworkingManager.handleCompletition, receiveValue: { [weak self] meals in
                 if !meals.isEmpty {
                     self?.dessertDetails = meals
                 }
