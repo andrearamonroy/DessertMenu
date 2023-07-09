@@ -13,14 +13,14 @@ class DessertViewModel: ObservableObject {
     
     @Published var desserts: [DessertModel] = []
     private var cancellables = Set<AnyCancellable>()
-    let dataService: ProductionDataService
+    let dataService: DataServiceProtocol
     
-    init(dataService: ProductionDataService){
+    init(dataService: DataServiceProtocol){
         self.dataService = dataService
         loadDesserts()
     }
     
-    private func loadDesserts(){
+    func loadDesserts(){
         dataService.getData()
             .sink(receiveCompletion: NetworkingManager.handleCompletition, receiveValue: { [weak self] returnedMeals in
                 self?.desserts = returnedMeals.meals

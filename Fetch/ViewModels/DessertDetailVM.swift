@@ -21,7 +21,7 @@ class DessertDetailVM: ObservableObject {
         self.loadDetails()
     }
     
-    private func loadDetails() {
+     func loadDetails() {
         dataService.$dessertDetails
             .sink { [weak self] meals in
                 self?.dessertDetails = meals

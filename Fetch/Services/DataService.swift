@@ -8,9 +8,6 @@
 import Foundation
 import Combine
 
-protocol DataServiceProtocol {
-    func getData() -> AnyPublisher <MealModel, Error>
-}
 
 class ProductionDataService: DataServiceProtocol {
     
@@ -28,7 +25,6 @@ class ProductionDataService: DataServiceProtocol {
             .eraseToAnyPublisher()
     }
 }
-
 
 
 

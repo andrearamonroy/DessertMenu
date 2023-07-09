@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class DetailDataService: ObservableObject {
+class DetailDataService: ObservableObject{
     @Published var dessertDetails: [DessertIngredientModel] = []
     private let dessert: DessertModel
     private var cancellables = Set<AnyCancellable>()
