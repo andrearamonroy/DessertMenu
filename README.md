@@ -20,5 +20,5 @@ endpoint 1: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
 endpoint 2: "https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID"
 
 
-![Simulator Screenshot - iPhone 14 Pro - 2023-07-10 at 08 35 05](https://github.com/andrearamonroy/DessertMenu/assets/54419381/9daaa422-a290-4320-85b2-69ee4805ff69)
-![Simulator Screenshot - iPhone 14 Pro - 2023-07-10 at 08 35 15](https://github.com/andrearamonroy/DessertMenu/assets/54419381/10d0f052-d1ca-4ded-9b14-dcda08c8e313)
+
+<img scr="https://github.com/andrearamonroy/DessertMenu/assets/54419381/2ffc3f69-254d-4f28-9b37-1a4f791afa49" width="200" height="400"/>
