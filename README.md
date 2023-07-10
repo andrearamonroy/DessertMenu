@@ -21,4 +21,5 @@ endpoint 2: "https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID"
 
 
 
-<img scr="https://github.com/andrearamonroy/DessertMenu/assets/54419381/2ffc3f69-254d-4f28-9b37-1a4f791afa49" width="200" height="400"/>
+
+![homeScreen](https://github.com/andrearamonroy/DessertMenu/assets/54419381/fc8a279f-eb81-4f63-af41-e73a8d07229b) | width=200 height=400
