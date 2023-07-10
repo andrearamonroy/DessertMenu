@@ -15,7 +15,7 @@ protocol DataServiceProtocol {
 class ProductionDataService: DataServiceProtocol {
     
     let url: URL
-    //= URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")!
+    //= URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")
     
     init(url: URL){
         self.url = url
