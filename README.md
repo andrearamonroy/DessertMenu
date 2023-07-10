@@ -21,4 +21,4 @@ and the second to get the details of the recipe.
 - endpoint 2: "https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID"
 
 
-<img width="1549" alt="fetchProject" src="https://github.com/andrearamonroy/DessertMenu/assets/54419381/9312e6be-b47f-41a9-89df-9454445c6584">
+<img width="1549" alt="fetchProject" src="https://github.com/andrearamonroy/DessertMenu/assets/54419381/e0923860-c2b6-4af2-b499-ee95d1dba358">
