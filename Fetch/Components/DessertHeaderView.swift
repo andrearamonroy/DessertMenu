@@ -18,7 +18,7 @@ struct DessertHeaderView: View {
             .padding()
             .foregroundColor(.white)
             .frame(maxWidth: .infinity)
-            .background(Color.blue)
+            .background(Color.cyan)
             .padding(.top, UIApplication.shared.connectedScenes
                 .compactMap { $0 as? UIWindowScene }
                 .first?.windows.first?.safeAreaInsets.top)

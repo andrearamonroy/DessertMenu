@@ -28,26 +28,14 @@ struct DessertDetailView: View {
                                let measurements = dessertDetailVM.nonEmptyMeasurements(detail: detail) {
                                 let ingredientMeasurementPairs = Array(zip(measurements, ingredients))
                                 
-                                Section(header: Text("Ingredients and Measurements")
-                                    .font(.headline)
-                                    .padding(.vertical, 16)
-                                    .frame(maxWidth: .infinity)
-                                    .foregroundColor(.white)
-                                    .background(Color.cyan)
-                                    .cornerRadius(8)) {
+                                DessertSectionTextView(sectionTitle: "Ingredients")
                                     ForEach(ingredientMeasurementPairs, id: \.0) { pair in
                                         Text("\(pair.0): \(pair.1)")
                                     }
-                                }
+                                
                             }
                             
-                            Text("Instructions")
-                                .font(.headline)
-                                .padding(.vertical, 16)
-                                .frame(maxWidth: .infinity)
-                                .foregroundColor(.white)
-                                .background(Color.cyan)
-                                .cornerRadius(8)
+                            DessertSectionTextView(sectionTitle: "Instructions")
                             
                             Text(detail.strInstructions)
                                 .foregroundColor(.primary)
