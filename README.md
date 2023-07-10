@@ -21,10 +21,10 @@ and the second to get the details of the recipe.
 - endpoint 2: "https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID"
 
 
-### HomeScreen
+### Home Screen
 
 <img src="https://github.com/andrearamonroy/DessertMenu/assets/54419381/fc8a279f-eb81-4f63-af41-e73a8d07229b" alt="homeScreen" width="400">
 
 ### Detail View
 
-<img src="https://github.com/andrearamonroy/DessertMenu/assets/54419381/7edf0bab-e773-4fa5-838f-92fdf71158e8" alt="detailView" width="600">
+<img src="https://github.com/andrearamonroy/DessertMenu/assets/54419381/7edf0bab-e773-4fa5-838f-92fdf71158e8" alt="detailView" width="400">
